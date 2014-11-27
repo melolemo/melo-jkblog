@@ -1,0 +1,13 @@
+---
+require:
+- jekyll-compass
+- susy
+- breakpoint
+project_path: C:/Msys64/home/melo/deploy/melo-jekyll-blog
+http_path: /
+css_dir: css
+sass_dir: _compass
+images_dir: images
+javascripts_dir: js
+output_style: compressed
+

@@ -1,0 +1,21 @@
+title: Melon and Lemon
+description: Web Design and coding
+paginate: 5
+markdown: redcarpet
+redcarpet:
+  extensions: [fenced_code_blocks,autolink,tables,strikethrough]
+highlighter: rouge
+gems:
+- jekyll-compass
+- susy
+- breakpoint
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+      author: "melolemo"
+      categories: "jekyll"
+      tags: "ruby"
