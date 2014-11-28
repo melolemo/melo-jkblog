@@ -1,6 +1,7 @@
 title: Melon and Lemon
 description: Web Design and coding
 baseurl: "http://melolemo.github/melo-jkblog"
+encoding: utf-8"
 paginate: 5
 markdown: redcarpet
 redcarpet:
