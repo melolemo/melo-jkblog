@@ -1,14 +1,13 @@
 # Site settings
 title: Melon and Lemon
 description: Web site design and coding
-baseurl: "http://melolemo.github.io/melo-jkblog"
+baseurl: "/melo-jkblog"
 paginate: 5
 twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
 # markdown: kramdown
-gems: [rouge]
 markdown: redcarpet
 redcarpet:
   extensions: [fenced_code_blocks,autolink,tables,strikethrough]
