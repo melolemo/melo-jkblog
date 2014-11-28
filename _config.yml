@@ -7,4 +7,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
-markdown: kramdown
+# markdown: kramdown
+markdown: redcarpet
+redcarpet:
+  extensions: [fenced_code_blocks,autolink,tables,strikethrough]
