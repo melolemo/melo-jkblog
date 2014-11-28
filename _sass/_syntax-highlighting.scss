@@ -2,10 +2,9 @@
  * Syntax highlighting styles
  */
 .highlight {
-    background: #f5f2f0;
-    margin-bottom: 2em;
+    background: #fff;
+    @extend %vertical-rhythm;
 
-    pre    { background: #f5f2f0; }
     .c     { color: #998; font-style: italic } // Comment
     .err   { color: #a61717; background-color: #e3d2d2 } // Error
     .k     { font-weight: bold } // Keyword
