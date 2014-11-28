@@ -1,9 +1,8 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: Melon and Lemon
 description: Web site design and coding
-baseurl: "http://melolemo.github.io/melo-jkblog" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+baseurl: "http://melolemo.github.io/melo-jkblog"
+
 twitter_username: jekyllrb
 github_username:  jekyll
 
