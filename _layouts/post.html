@@ -1,28 +1,15 @@
 ---
 layout: default
 ---
-<div class="content-area">
-  <article class="single-post">
-    <header class="post-header">
-      <h1 class="post-title">{{ page.title }}</h1>
-      <div class="single-meta">
-        <span class="label label-primary">{{ page.date | date: "%F" }}</span>
-        <span class="label label-success">{{ page.categories | sort | array_to_sentence_string }}</span>
-        <span class="label label-warning">{{ page.tags | sort | array_to_sentence_string }}</span>
-        <span class="label label-danger">{{ page.author }}</span>
-      </div>
-    </header>
-    <div class="post-content">
-        {{ content }}
-    </div>
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+  </header>
+
+  <article class="post-content">
+    {{ content }}
   </article>
-  
-  <div class="btn-group btn-group-justified">
-    {% if page.previous %}
-    <a rel="prev" href="{{ page.previous.url }}" class="btn btn-primary" title="View {{ page.previous.title }}">古い記事</a>
-    {% endif %}
-    {% if page.next %}
-    <a rel="next" href="{{ page.next.url }}" class="btn btn-info" title="View {{ page.next.title }}">新しい記事</a>
-    {% endif %}
-  </div>
+
 </div>

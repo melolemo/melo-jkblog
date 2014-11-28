@@ -2,41 +2,22 @@
 layout: default
 ---
 
-<div class="content-area">
-  {% for post in paginator.posts %}
-  <article class="archive-post">
-    <header class="post-header">
-      <h1 class="post-title">
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </h1>
-      <div class="archive-meta">
-        <span class="label label-primary">{{ post.date | date: "%F" }}</span>
-        <span class="label label-success">{{ post.categories | sort | array_to_sentence_string }}</span>
-        <span class="label label-warning">{{ post.tags | sort | array_to_sentence_string }}</span>
-        <span class="label label-danger">{{ post.author }}</span>
-      </div>
-    </header>
-    <div class="post-excerpt">
-        {{ post.excerpt }}
-    </div>
-  </article>
-  {% endfor %}
-  
-  <div class="btn-group btn-group-justified">
-    {% if paginator.previous_page == 1 %}
-    <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn-primary">Previous</a>
-    {% elsif paginator.previous_page %}
-    <a href="/page{{ paginator.previous_page }}" class="previous btn btn-primary">Previous</a>
-    {% else %}
-    <span class="btn btn-primary disabled">Previous</span>
-    {% endif %}
-    <span class="btn btn-info disabled">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    {% if paginator.next_page %}
-    <a href="/page{{ paginator.next_page }}" class="next btn btn-primary">Next</a>
-    {% else %}
-    <span class="btn btn-primary disabled">Next</span>
-    {% endif %}
-  </div>
-  
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-</div><!-- .content-area -->
+
+</div>
