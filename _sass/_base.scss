@@ -74,6 +74,17 @@ body {
   font-size: 48px;
 }
 
+a.scroll-top {
+  color: #5bc0de;
+  transition: 2s;
+  -webkit-transition: 2s;
+  &:hover {
+    color: #006687;
+    transition: 2S;
+    -webkit-transition: 2s;
+  }
+}
+
 ul.nav li.dropdown:hover > ul.dropdown-menu,
 .toggle-set:hover > ul.dropdown-menu {
   display: block;
