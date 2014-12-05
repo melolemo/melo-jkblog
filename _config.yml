@@ -8,8 +8,7 @@ github_username:  jekyll
 
 # Build settings
 # markdown: kramdown
-# highlighter: pygmentize
-highlighter: rouge
+highlighter: pygmentize
 markdown: redcarpet
 redcarpet:
   extensions: [fenced_code_blocks,autolink,tables,strikethrough]
