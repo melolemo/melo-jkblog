@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>/jekyll/2014/12/02/jekyll-02.html</loc>
+    <lastmod>2014-12-02T00:00:00+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>/jekyll/2014/12/01/jekyll-start.html</loc>
+    <lastmod>2014-12-01T00:00:00+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>/jekyll/update/2014/11/24/welcome-to-jekyll.html</loc>
+    <lastmod>2014-11-24T06:22:57+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>/jekyll/update/2014/11/24/sample001.html</loc>
+    <lastmod>2014-11-24T00:00:00+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>/about/</loc>
+    <lastmod>2014-12-27T12:16:52+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>/</loc>
+    <lastmod>2014-12-27T12:16:52+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>

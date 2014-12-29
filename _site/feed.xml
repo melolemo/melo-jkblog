@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Melon and Lemon</title>
+    <description>Web site design and coding</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 27 Dec 2014 12:16:52 +0900</pubDate>
+    <lastBuildDate>Sat, 27 Dec 2014 12:16:52 +0900</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Jekyll の使い方</title>
+        <description>&lt;p&gt;前回の記事で、Jekyll のインストールの方法を紹介しました。Bundler を使う方法とそのままインストールする方法があります。今回の記事では、bundler を使う方法でインストールします。そして、何もない状態からブログを作成し、Jekyll の仕組みを理解することにします。&lt;/p&gt;
+
+&lt;h2&gt;準備&lt;/h2&gt;
+
+&lt;p&gt;Jekyll を sample というディレクトリを作成し、その中に Bundler を使用してインストールします。また、syntaxhighlighter を使用することを前提に進めていきます。&lt;/p&gt;
+
+&lt;h2&gt;syntaxhighlighter に pygments を使用する場合のインストール&lt;/h2&gt;
+
+&lt;h3&gt;Gemfile の作成&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;# A sample Gemfile
+source &amp;quot;https://rubygems.org&amp;quot;
+
+gem &amp;quot;jekyll&amp;quot;
+gem &amp;quot;wdm&amp;quot;, &amp;quot;&amp;gt;= 0.1.0&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;bundler でインストール&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;$ bundle install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;_config.yml の作成&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;exclude: [&amp;#39;vendor&amp;#39;]
+highlighter: pygmentize
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;syntaxhighlighter に rouge を使用する場合のインストール&lt;/h2&gt;
+
+&lt;h3&gt;Gemfile の作成&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;# A sample Gemfile
+source &amp;quot;https://rubygems.org&amp;quot;
+
+gem &amp;quot;jekyll&amp;quot;
+gem &amp;quot;wdm&amp;quot;, &amp;quot;&amp;gt;= 0.1.0&amp;quot;
+gem &amp;quot;rouge&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;bundler でインストール&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;$ bundle install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;_config.yml の作成&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;exclude: [&amp;#39;vendor&amp;#39;]
+highlighter: rouge
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        <pubDate>Tue, 02 Dec 2014 00:00:00 +0900</pubDate>
+        <link>/jekyll/2014/12/02/jekyll-02.html</link>
+        <guid isPermaLink="true">/jekyll/2014/12/02/jekyll-02.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>Jekyll を始める</title>
+        <description>&lt;p&gt;Jekyll とは、Ruby 製のシンプルなブログを構築するジェネレーターです。一般的に GitHub Pages に Git で Deploy して使用するため開発系の仕事をしている人たちに人気があるようです。Ruby や Git を理解していない素人には、少し敷居が高いような感じがしますが、手軽に始められるなどの記事も散見されましたので、トライしてみることにします。&lt;/p&gt;
+
+&lt;h1&gt;Jekyll のインストール&lt;/h1&gt;
+
+&lt;h2&gt;PC 環境&lt;/h2&gt;
+
+&lt;p&gt;今回は、下記のような環境にインストールします。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Windows 8.1&lt;/li&gt;
+&lt;li&gt;Ruby 2.0.0p598 (2014-11-13) [i386-mingw32]&lt;/li&gt;
+&lt;li&gt;DEVELOPMENT KIT&lt;/li&gt;
+&lt;li&gt;Git for windows version 1.9.4.msysgit.2&lt;/li&gt;
+&lt;li&gt;Msys2&lt;/li&gt;
+&lt;li&gt;Console2 + Nyaos 3.3.9&lt;/li&gt;
+&lt;li&gt;Jekyll 2.5.2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;準備&lt;/h2&gt;
+
+&lt;p&gt;Jekyll を使用するには、Ruby をインストールする必要があります。また、DEVELOPMENT KIT も必要なので一緒にインストールします。&lt;/p&gt;
+
+&lt;h3&gt;Ruby のインストール&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://rubyinstaller.org/downloads/&quot;&gt;Ruby Installer&lt;/a&gt; のサイトから使用するバージョンの Ruby をダウンロードします。ダウンロードした Ruby のバージョンに合わせて、DEPELOPMENT KIT もダウンロードします。
+今回は、Ruby 2.0.0p598 ( 32bit版 )をインストールしました。それぞれインストールが完了したら、DEPELOPMENT KIT をインストールしたディレクトリに移動し、Ruby コマンドプロンプトで下記のコマンドを実行します。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;$ ruby dk.rb init
+$ ruby dk.rb install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Gem を最新のバージョンにします。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;$ gem install rubygems-update
+$ update_rubygems
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;正常にインストールが完了したか、バージョンを表示させるコマンドで確認します。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;$ ruby -v
+ruby 2.0.0p598 (2014-11-13) [i386-mingw32]
+
+$ gem -v
+2.4.5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;上記のようにバージョンが表示されると思います。これで、Ruby を使用する事ができます。&lt;/p&gt;
+
+&lt;h3&gt;Jekyll のインストール&lt;/h3&gt;
+
+&lt;p&gt;本家のサイトによると Jekyll は、「下記のコマンドだけで手軽に始める事ができる」みたいな記述がされています。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;~ $ gem install jekyll
+~ $ jekyll new myblog
+~ $ cd myblog
+~/myblog $ jekyll serve
+# =&amp;gt; Now browse to http://localhost:4000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;上記の内容は、&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Jekyll のインストール&lt;/li&gt;
+&lt;li&gt;myblog というディレクトリに Jekyll のブログのひな形を作成&lt;/li&gt;
+&lt;li&gt;myblog ディレクトリに移動&lt;/li&gt;
+&lt;li&gt;サーバー起動（ビルド後にサーバー起動）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ブラウザで、http:/localhost:4000 にアクセスするとブログのひな形が表示されるという内容です。&lt;/p&gt;
+
+&lt;p&gt;しかし、Windows の場合は、悲しいことにエラーになってしまします。
+エラーの原因は、記事に syntaxhighlighter の記述があるためです。Jekyll は、syntaxhighlighter の初期値が pygments になっていますが、Windows は、pygments に対応していないようです。&lt;/p&gt;
+
+&lt;p&gt;一般的な対応策として、syntaxhighlighter を pygments と互換性のある Rouge に変更する方法があります。手順は、下記のようになります。&lt;/p&gt;
+
+&lt;p&gt;Rouge のインストール&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;$ gem install rouge
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;_config.yml に下記の内容を追加する&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;highlighter: rouge
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Jekyll の古いバージョンでは、別途、Python をインストールし、Python で、pygments をインストールすると Windows でも pygments が利用できるようですが、現在のバージョンは、_config.yml に下記の内容を追加することで、pygments が使用できるようになります。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;highlighter: pygmentize
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;pygments ではなく pygmentize であることに注意してください。&lt;/p&gt;
+
+&lt;p&gt;まだ何か、メッセージが出ています。Windows の場合は、wdm が必要みたいなメッセージが・・・&lt;/p&gt;
+
+&lt;p&gt;wdm をインストールします。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;$ gem install wdm
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Jekyll を実行してメッセージが出ないことを確認します。&lt;/p&gt;
+
+&lt;h2&gt;Bundler を使用して Jekyll をインストールする&lt;/h2&gt;
+
+&lt;p&gt;下記の内容の Gemfile を作成します。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;# A sample Gemfile
+source &amp;quot;https://rubygems.org&amp;quot;
+
+gem &amp;quot;jekyll&amp;quot;
+gem &amp;quot;wdm&amp;quot;, &amp;quot;&amp;gt;= 0.1.0&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Bundler を使用して Jekyll をインストールします。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;$ bundle install --path vendor/bundle
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;あとは、Jekyll のルールに従ってブログを構築していきます。Jekyll の場合は、middleman のようにカレントディレクトリーにひな形を作成することができません。ひな形を利用したい場合は一旦、jekyll new sample で、sample ディレクトリにひな形を作成し、中身をカレントディレクトリに移動後、sample ディレクトリを削除するなど工夫をすることになります。&lt;/p&gt;
+
+&lt;p&gt;この状態で、jekyll serve を実行するとエラーとなりますので、_config.yml に下記の内容を追加します。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;exclude: [&amp;#39;vendor&amp;#39;]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;まとめ&lt;/h2&gt;
+
+&lt;h3&gt;Windows で Jekyll を使用する場合の注意&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;syntaxhighlighter を使用する場合、_config.yml に highlighter: pygmentize を追加する。または、Rouge をインストールして対応する。&lt;/li&gt;
+&lt;li&gt;wdm をインストールする。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Bundler を使用してインストールする場合の注意&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;_config.yml に exclude: [&amp;#39;vendor&amp;#39;] を追加する。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 01 Dec 2014 00:00:00 +0900</pubDate>
+        <link>/jekyll/2014/12/01/jekyll-start.html</link>
+        <guid isPermaLink="true">/jekyll/2014/12/01/jekyll-start.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;def print_hi(name)
+  puts &amp;quot;Hi, #{name}&amp;quot;
+end
+print_hi(&amp;#39;Tom&amp;#39;)
+#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;test&lt;/p&gt;
+</description>
+        <pubDate>Mon, 24 Nov 2014 06:22:57 +0900</pubDate>
+        <link>/jekyll/update/2014/11/24/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">/jekyll/update/2014/11/24/welcome-to-jekyll.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Jekyll blog sample</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes.sample.&lt;/p&gt;
+
+&lt;p&gt;漢字で入力です。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;ruby sample test
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        <pubDate>Mon, 24 Nov 2014 00:00:00 +0900</pubDate>
+        <link>/jekyll/update/2014/11/24/sample001.html</link>
+        <guid isPermaLink="true">/jekyll/update/2014/11/24/sample001.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+  </channel>
+</rss>
