@@ -4,88 +4,74 @@ Melon and Lemon style
 */
 
 body {
-  background-color: #fcfcfc;
+  font-family: meiryo;
+  font-size: 16px;
+  line-height: 1.8em;
+  color: #444;
 }
-.site-branding {
-  .site-title {
-    font-size: 39px;
-  }
-  .site-description {
-    margin: 0;
-    padding: 0;
-    font-size: 15px;
-  }
+.btn {
+  font-size: 12px;
 }
-
-.content-area {
-  font-family: "メイリオ", meiryo;
+.logo {
+  line-height: 173px;
 }
-.content-area h1,
-.content-area h2,
-.content-area h3,
-.content-area h4,
-.content-area h5,
-.content-area h6 {
-  font-family: "メイリオ", meiryo;
+.bold {
+  font-weight: bold;
+  line-height: 60px;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.site-title {
+  font-family: "Roboto";
+  font-size: 39px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.2em;
+  margin: .5em 0;
+}
+.site-description {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 .archive-post {
-  margin-bottom: 5em;
+  margin: 1em 0 5em;
+  padding: 1em;
 }
-.post-excerpt {
-  padding: 1em 0;
+.post-title {
+  font-size: 32px;
+  line-height: 1.2em;
+  color: #666;
 }
-.post-content {
-  padding: 1em 0;
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  font-weight: bold;
+  line-height: 1.2em;
+  color: #666;
+  margin: 0 0 2em;
 }
+.post-content h1 { font-size: 28px; }
+.post-content h2 { font-size: 24px; }
+.post-content h3 { font-size: 20px; }
+.post-content h4 { font-size: 16px; }
+.post-content h5 { font-size: 14px; }
+.post-content h6 { font-size: 12px; }
 
-.widget-title {
-  font-size: 24px;
-  font-weight: 300;
-}
-.nav-tabs {
-  font-size: 14px;
-}
-.tab-pane {
-  padding: 1em 0;
-}
+main {
+    padding-left: 240px;
+  }
 
-.site-footer {
-  margin-top: 1em;
-}
-.site-info {
-  padding: 3em 0;
-  font-size: 14px;
-  text-align: center;
-  color: #fff;
-  background-color: #006687;
-  a {
-    color: #ccc;
-    &:hover {
-      color: #fff;
+  @media only screen and (max-width : 992px) {
+    main {
+      padding-left: 0;
     }
   }
-}
-
-.scroll-top {
-  bottom: 20px;
-  right: 30px;
-  position: fixed;
-  z-index: 1;
-  font-size: 48px;
-}
-
-a.scroll-top {
-  color: #5bc0de;
-  transition: 2s;
-  -webkit-transition: 2s;
-  &:hover {
-    color: #006687;
-    transition: 2S;
-    -webkit-transition: 2s;
-  }
-}
-
-ul.nav li.dropdown:hover > ul.dropdown-menu,
-.toggle-set:hover > ul.dropdown-menu {
-  display: block;
-}

@@ -1,12 +1,33 @@
-<footer class="site-footer">
-
-  <div class="site-info">
-    
-    <a href="{{ site.baseurl }}/">{{ site.title }}</a><span>｜by Jekyll</span>
-
+<footer class="page-footer indigo">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Footer Content</h5>
+        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Links</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <a href="#" class="scroll-top"><span class="glyphicon glyphicon-upload"></span></a>
+  <div class="footer-copyright indigo-lighten-1">
+    <div class="container">
+      © 2014 Copyright Text
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+    </div>
+  </div>
 </footer>
-<script src="{{ "/js/jquery.min.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "/js/melo.js" | prepend: site.baseurl }}"></script>
+
+<script src="{{ "js/jquery.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "js/materialize.min.js" | prepend: site.baseurl }}"></script>
+<script>
+$(document).ready(function(){
+  $(".button-collapse").sideNav();
+});
+</script>

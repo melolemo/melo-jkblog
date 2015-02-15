@@ -1,46 +1,14 @@
-<div class="navbar navbar-inverse">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+<nav class="indigo">
+  <div class="nav-wrapper container">
+    <div class="col s12">
+      <a href="/" class="brand-logo">{{ site.title }}</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="components.html">Components</a></li>
+        <li><a href="sass.html"><i class="mdi-action-search"></i></a></li>
+        <li><a href="mobile.html"><i class="mdi-navigation-more-vert"></i></a></li>
+      </ul>
+      <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    </div>
   </div>
-  <div class="navbar-collapse collapse navbar-inverse-collapse">
-    <ul class="nav navbar-nav">
-      {% for page in site.pages %}
-        {% if page.title %}
-        <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-        {% endif %}
-      {% endfor %}
-      <li><a href="#">Active</a></li>
-      <li><a href="#">Link</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li class="divider"></li>
-          <li class="dropdown-header">Dropdown header</li>
-          <li><a href="#">Separated link</a></li>
-          <li><a href="#">One more separated link</a></li>
-        </ul>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Link</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</div>
+</nav>
