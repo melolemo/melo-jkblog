@@ -24,10 +24,28 @@
   </div>
 </footer>
 
-<script src="{{ "js/jquery.min.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "js/materialize.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/jquery.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/materialize.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/animsition.min.js" | prepend: site.baseurl }}"></script>
 <script>
 $(document).ready(function(){
   $(".button-collapse").sideNav();
+  $(".animsition").animsition({
+    inClass               :   'flip-in-y',
+    outClass              :   'flip-out-x',
+    inDuration            :    1500,
+    outDuration           :    800,
+    linkElement           :   '.animsition-link',
+    loading               :    true,
+    loadingParentElement  :   'body',
+    loadingClass          :   'animsition-loading',
+    unSupportCss          : [ 'animation-duration',
+                              '-webkit-animation-duration',
+                              '-o-animation-duration'
+                            ],
+    overlay               :   false,
+    overlayClass          :   'animsition-overlay-slide',
+    overlayParentElement  :   'body'
+  });
 });
 </script>

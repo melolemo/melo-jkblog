@@ -7,7 +7,7 @@ layout: default
   <article class="archive-post z-depth-2">
     <div class="post-header">
       <h1 class="post-title">
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <a class="animsition-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </h1>
       <div class="archive-meta">
         <span class="btn disabled indigo-text indigo lighten-4">{{ post.date | date: "%F" }}</span>
@@ -19,7 +19,7 @@ layout: default
     <div class="post-excerpt">
       {{ post.excerpt }}
     </div>
-    <a href="{{ post.url | prepend: site.baseurl }}" class="waves-effect waves-light btn indigo"><i class="mdi-content-send right"></i>続きを読む・・・</a>
+    <a class="animsition-link waves-effect waves-light btn indigo" href="{{ post.url | prepend: site.baseurl }}"><i class="mdi-content-send right"></i>続きを読む・・・</a>
   </article>
   {% endfor %}
   </div>
