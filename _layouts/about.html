@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="container">
+<article class="single-post">
+  <div class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-meta">
+      <span class="btn disabled indigo-text indigo lighten-4">{{ page.date | date: "%F" }}</span>
+      <span class="btn disabled blue-text blue lighten-4">{{ page.categories | sort | array_to_sentence_string }}</span>
+      <span class="btn disabled green-text green lighten-4">{{ page.tags | sort | array_to_sentence_string }}</span>
+      <span class="btn disabled yellow-text yellow lighten-4">{{ page.author }}</span>
+    </div>
+  </div>
+  <div class="post-content">
+    {{ content }}
+  </div>
+</article>
+</div>
